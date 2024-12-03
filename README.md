@@ -9,6 +9,7 @@ This project is a ***responsive landing page*** designed for modern devices such
 - **Dynamic Navigation Menu:** Generated **automatically** based on sections.
 - **Smooth Scrolling:** Enables seamless navigation experience.
 - **Active Section Highlighting:** Highlights the section currently in the viewport.
+- **Responsive Design:** Optimized for various screen sizes using media queries.
 
 ## Technologies Used:
 
