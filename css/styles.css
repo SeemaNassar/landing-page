@@ -67,7 +67,8 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar__menu li {
@@ -86,6 +87,11 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+}
+
+ /* Hide the hamburger menu on large screens */
+.navbar__toggle {
+    display: none; 
 }
 
 /* Header Styles */
@@ -220,4 +226,82 @@ section.active-section .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+/* Active Link Styling */
+a.active-link {
+    color: #2186bc !important;
+    background: rgba(34, 34, 35, 0.2); 
+    border-radius: 5px;
+}
+
+/* ---- Responsive Rules ---- */
+/* Responsive for mobile screen */
+@media only screen and (max-width: 768px) {
+    /* Navbar */
+    .navbar__menu ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      z-index: 999;
+    }
+  
+    .navbar__menu li {
+      display: block;
+      text-align: center;
+    }
+  
+    .navbar__toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: #243870;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  
+    .navbar__menu.open ul {
+      display: flex;
+    }
+  
+    section {
+      min-height: 100vh;
+    }
+  
+    h1 {
+      font-size: 2.4em;
+      margin: 1rem;
+    }
+  
+    .landing__container {
+      padding: 1em;
+      font-size: 0.8em;
+    }
+  
+    .page__footer {
+      padding: 1em;
+    }
+}
+
+/* Responsive for Tablet Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .navbar__menu li {
+       font-size: 1.2em;
+    } 
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .landing__container {
+        padding: 3em;
+    }
+
+    .landing__container p {
+        font-size: 1.4em;
+    }
 }
